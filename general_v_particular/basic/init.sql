@@ -45,3 +45,10 @@ CREATE TABLE relations.g1_subsets_g2 (
     g2_core_id BIGSERIAL REFERENCES generals.g_core,
     active BOOLEAN NOT NULL DEFAULT true 
 );
+
+CREATE TABLE relations.p1_is_g_of_p2 (
+    p1_core_id BIGSERIAL REFERENCES particulars.p_core,
+    p2_core_id BIGSERIAL REFERENCES particulars.p_core,
+    g_core_id BIGSERIAL REFERENCES generals.g_core,
+    active BOOLEAN NOT NULL DEFAULT true 
+);
